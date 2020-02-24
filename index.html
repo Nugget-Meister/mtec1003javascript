@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+  </head>
+<style media="screen">
+
+</style>
+  <body>
+    <p id="words">0</p>
+    <blockquote cite="http://">
+      Helllo there friend
+    </blockquote>
+    <script>
+      console.log("testing");
+      var string = "";
+      /*
+       for (var i = 0; i < 10; i++) {
+       string +=i;
+      };
+
+      console.log(string + i);
+      */
+
+      // var i = 0;
+
+      document.addEventListener("click", function(){
+        var p = document.getElementById("words");
+        var insideP = parseInt(p.innerHTML);
+
+        if (insideP < 6) {
+          p.innerHTML = (insideP += 1);
+        }
+      });
+    </script>
+  </body>
+</html>
