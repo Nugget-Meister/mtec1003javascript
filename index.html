@@ -4,24 +4,47 @@
     <meta charset="utf-8">
     <title>Test</title>
   </head>
-<style media="screen">
-
-</style>
   <body>
-    <p id="words">0</p>
-    <blockquote cite="http://">
-      Helllo there friend
-    </blockquote>
+    <canvas id="myCanvas" width="600" height="600"></canvas>
     <script>
-      console.log("testing");
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+
+
+    function drawrect(x) {
+      ctx.beginPath();
+      ctx.linewidth = ("5");
+      ctx.strokeStyle = "blue";
+      ctx.rect(x, 5, 100, 100);
+      ctx.stroke();
+    }
+
+    drawrect(5);
+
+    var x = 5;
+
+    function moveRect(){
+
+
+      ctx.clearRect(0, 0, 600, 600);
+      drawrect(x += 1);
+    if (x <= 400){
+      requestAnimationFrame(moveRect);
+      }
+    }
+
+      moveRect();
+
+
+      /* console.log("testing");
       var string = "";
-      /*
+
        for (var i = 0; i < 10; i++) {
        string +=i;
       };
 
       console.log(string + i);
-      */
+
 
       // var i = 0;
 
@@ -32,7 +55,7 @@
         if (insideP < 6) {
           p.innerHTML = (insideP += 1);
         }
-      });
+      }); */
     </script>
   </body>
 </html>
